@@ -20,7 +20,8 @@ function TinderCards() {
     const LoadInitialRestaurants = () => {
         console.log(`lat: ${latitude} long: ${longitude}`);
         if (latitude && longitude) {
-            axios.get(`https://cors-anywhere.herokuapp.com/https://peaceful-wave-51123.herokuapp.com/api/v1/public/get-listings?lat=${latitude}&long=${longitude}`)
+            // dev only add https://cors-anywhere.herokuapp.com/ at beginning
+            axios.get(`https://peaceful-wave-51123.herokuapp.com/api/v1/public/get-listings?lat=${latitude}&long=${longitude}`)
                 .then(res => {
                     let { businesses } = res.data; // let business = res.data.businesses
                     setRestaurants(businesses);
