@@ -14,29 +14,33 @@ function TinderCards() {
         navigator.geolocation.getCurrentPosition(function (position) {
             setLatitude(position.coords.latitude);
             setLongitude(position.coords.longitude);
-        });
-    }
 
-    const LoadInitialRestaurants = () => {
-        console.log(`lat: ${latitude} long: ${longitude}`);
-        if (latitude && longitude) {
-            // dev only add https://cors-anywhere.herokuapp.com/ at beginning
-            axios.get(`https://peaceful-wave-51123.herokuapp.com/api/v1/public/get-listings?lat=${latitude}&long=${longitude}`)
+            axios.get(`https://peaceful-wave-51123.herokuapp.com/api/v1/public/get-listings?lat=${position.coords.latitude}&long=${position.coords.longitude}`)
                 .then(res => {
                     let { businesses } = res.data; // let business = res.data.businesses
                     setRestaurants(businesses);
                     setLoading(false);
                 }).catch(e => { console.log(e) })
-        }
-        else {
-            console.log('waiting on lat and long');
-        }
+        });
+    }
+
+    const LoadInitialRestaurants = () => {
+
+        // dev only add https://cors-anywhere.herokuapp.com/ at beginning
+        axios.get(`peaceful-wave-51123.herokuapp.com/api/v1/public/get-listings?lat=${latitude}&long=${longitude}`)
+            .then(res => {
+                let { businesses } = res.data; // let business = res.data.businesses
+                setRestaurants(businesses);
+                setLoading(false);
+            }).catch(e => { console.log(e) })
+
 
 
     }
 
     useEffect(() => {
-        LoadInitialRestaurants();
+        getUserLocation();
+        // LoadInitialRestaurants();
     }, [])
 
     return (
