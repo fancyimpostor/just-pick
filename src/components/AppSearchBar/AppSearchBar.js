@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios';
+import React, { useState } from 'react'
 import PropTypes from 'prop-types';
 import { connect, useDispatch } from 'react-redux';
 
@@ -21,6 +20,9 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         alignItems: 'center',
         width: 400,
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        marginBottom: '20px'
     },
     input: {
         marginLeft: theme.spacing(1),
