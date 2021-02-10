@@ -22,7 +22,8 @@ const useStyles = makeStyles((theme) => ({
         width: 400,
         marginLeft: 'auto',
         marginRight: 'auto',
-        marginBottom: '20px'
+        marginBottom: '20px',
+        marginTop: '10px'
     },
     input: {
         marginLeft: theme.spacing(1),
