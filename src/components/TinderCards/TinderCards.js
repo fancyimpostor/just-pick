@@ -15,7 +15,8 @@ function TinderCards() {
             setLatitude(position.coords.latitude);
             setLongitude(position.coords.longitude);
 
-            axios.get(`https://cors-anywhere.herokuapp.com/https://peaceful-wave-51123.herokuapp.com/api/v1/public/get-listings?lat=${position.coords.latitude}&long=${position.coords.longitude}`)
+            axios.get(`https://cors-anywhere.herokuapp.com/https://peaceful-wave-51123.herokuapp.com/api/v1/public/get-listings?lat=
+            ${position.coords.latitude}&long=${position.coords.longitude}`)
                 .then(res => {
                     let { businesses } = res.data; // let business = res.data.businesses
                     setRestaurants(businesses);
