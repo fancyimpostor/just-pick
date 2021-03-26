@@ -5,7 +5,7 @@ import PersonIcon from '@material-ui/icons/Person';
 import ForumIcon from '@material-ui/icons/Forum';
 import IconButton from '@material-ui/core/IconButton';
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
-
+import SignIn from '../Authentication/SignIn';
 
 function Header({ backButton }) {
     const history = useHistory();
@@ -18,10 +18,14 @@ function Header({ backButton }) {
                         <ArrowBackIosIcon fontSize="large" className="header__icon" />
                     </IconButton>
                 ) : (
+                    <Link to="/authentication/signin">
                         <IconButton>
                             <PersonIcon className="header__icon" fontSize="large" />
                         </IconButton>
-                    )}
+                    </Link>
+
+
+                )}
 
                 <Link to="/">
                     <img

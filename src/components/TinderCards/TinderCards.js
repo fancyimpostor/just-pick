@@ -1,14 +1,17 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import TinderCard from 'react-tinder-card';
+import Modal from '@material-ui/core/Modal';
 import './TinderCards.css';
 import axios from 'axios';
+import RestaurantInfo from '../RestaurantInfo';
 
 function TinderCards() {
     const [restaurants, setRestaurants] = useState([]);
     const [loadingItems, setLoading] = useState(true);
     const [latitude, setLatitude] = useState('');
     const [longitude, setLongitude] = useState('');
+    const [viewDetails, setViewDetails] = useState(false);
 
     const getUserLocation = () => {
         navigator.geolocation.getCurrentPosition(function (position) {
@@ -39,6 +42,7 @@ function TinderCards() {
 
     }
 
+
     useEffect(() => {
         getUserLocation();
         // LoadInitialRestaurants();
@@ -57,16 +61,20 @@ function TinderCards() {
                             >
                                 <div
                                     style={{ backgroundImage: `url(${b.image_url})` }}
-                                    className="card">
+                                    className="card"
+                                >
                                     <h3>{b.name}</h3>
                                 </div>
+
+                                {viewDetails ? <RestaurantInfo /> : null}
                             </TinderCard>
 
                         )
                     })}
                 </div>
-
             }
+
+
         </div>
     )
 }

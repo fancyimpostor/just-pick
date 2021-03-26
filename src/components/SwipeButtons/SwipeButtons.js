@@ -12,23 +12,23 @@ const SwipeButtons = () => {
     return (
         <div className="swipeButtons">
             <IconButton className="swipeButtons__repeat">
-                <ReplayIcon fontSize="medium" />
+                <ReplayIcon fontSize="small" />
             </IconButton>
 
             <IconButton className="swipeButtons__left">
-                <CloseIcon fontSize="medium" />
+                <CloseIcon fontSize="small" />
             </IconButton>
 
             <IconButton className="swipeButtons__star">
-                <StarRateIcon fontSize="medium" />
+                <StarRateIcon fontSize="small" />
             </IconButton>
 
             <IconButton className="swipeButtons__right">
-                <FavoriteIcon fontSize="medium" />
+                <FavoriteIcon fontSize="small" />
             </IconButton>
 
             <IconButton className="swipeButtons__lightning">
-                <FlashOnIcon fontSize="medium" />
+                <FlashOnIcon fontSize="small" />
             </IconButton>
         </div>
     )

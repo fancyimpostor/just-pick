@@ -12,6 +12,8 @@ import SwipeButtons from '../SwipeButtons/SwipeButtons';
 import Chats from '../Chats/Chats';
 import ChatScreen from '../ChatScreen/ChatScreen';
 import AppSearchBar from '../AppSearchBar/AppSearchBar';
+import SignIn from '../Authentication/SignIn';
+import SignUp from '../Authentication/SignUp';
 
 import { Provider } from 'react-redux';
 import store from '../../store'
@@ -22,6 +24,14 @@ function App() {
       <div className="App">
         <Router>
           <Switch>
+            <Route path="/authentication/signup">
+              <Header backButton="/" />
+              <SignUp />
+            </Route>
+            <Route path="/authentication/signin">
+              <Header backButton="/" />
+              <SignIn />
+            </Route>
             <Route path="/chat/:person">
               <Header backButton="/chat" />
               <ChatScreen />
