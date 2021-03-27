@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@aws-amplify/ui-react": "^1.0.6",
+    "@babel/helper-builder-react-jsx": "^7.12.13",
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
     "@fortawesome/react-fontawesome": "^0.1.14",
@@ -54,7 +55,5 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "@babel/helper-builder-react-jsx": "^7.12.13"
-  }
+  "devDependencies": {}
 }
