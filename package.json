@@ -16,6 +16,7 @@
     "@testing-library/user-event": "^12.1.10",
     "aws-amplify": "^3.3.26",
     "axios": "^0.21.1",
+    "babel": "^6.23.0",
     "bootstrap": "^4.5.3",
     "cors-anywhere": "^0.4.3",
     "dotenv": "^8.2.0",
