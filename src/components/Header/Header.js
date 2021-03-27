@@ -5,7 +5,11 @@ import PersonIcon from '@material-ui/icons/Person';
 import ForumIcon from '@material-ui/icons/Forum';
 import IconButton from '@material-ui/core/IconButton';
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
-import SignIn from '../Authentication/SignIn';
+import Button from '@material-ui/core/Button';
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
+import Fade from '@material-ui/core/Fade';
+import FadeMenu from '../FadeMenu/FadeMenu';
 
 function Header({ backButton }) {
     const history = useHistory();
@@ -18,11 +22,14 @@ function Header({ backButton }) {
                         <ArrowBackIosIcon fontSize="large" className="header__icon" />
                     </IconButton>
                 ) : (
-                    <Link to="/authentication/signin">
-                        <IconButton>
-                            <PersonIcon className="header__icon" fontSize="large" />
-                        </IconButton>
-                    </Link>
+                    <FadeMenu />
+                    // <Link to="/authentication/signin">
+                    //     <IconButton>
+                    //         <PersonIcon className="header__icon" fontSize="large" />
+                    //     </IconButton>
+                    // </Link>
+
+
 
 
                 )}
@@ -39,7 +46,6 @@ function Header({ backButton }) {
                         <ForumIcon className="header__icon" fontSize="large" />
                     </IconButton>
                 </Link>
-
             </div>
         </div>
 

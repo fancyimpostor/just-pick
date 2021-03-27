@@ -6,6 +6,7 @@ import './TinderCards.css';
 import axios from 'axios';
 import RestaurantInfo from '../RestaurantInfo';
 
+
 function TinderCards() {
     const [restaurants, setRestaurants] = useState([]);
     const [loadingItems, setLoading] = useState(true);
@@ -18,7 +19,7 @@ function TinderCards() {
             setLatitude(position.coords.latitude);
             setLongitude(position.coords.longitude);
 
-            axios.get(`https://cors-anywhere.herokuapp.com/https://peaceful-wave-51123.herokuapp.com/api/v1/public/get-listings?lat=
+            axios.get(`https://cors-anywhere.herokuapp.com/https://peaceful-wave-51123.herokuapp.com/api/v1/listings?lat=
             ${position.coords.latitude}&long=${position.coords.longitude}`)
                 .then(res => {
                     let { businesses } = res.data; // let business = res.data.businesses
@@ -69,9 +70,12 @@ function TinderCards() {
                                 {viewDetails ? <RestaurantInfo /> : null}
                             </TinderCard>
 
+
+
                         )
                     })}
                 </div>
+
             }
 
 

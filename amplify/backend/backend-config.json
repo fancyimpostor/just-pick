@@ -1,0 +1,10 @@
+{
+  "auth": {
+    "justpickc8f345bf": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}

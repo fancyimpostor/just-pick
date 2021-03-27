@@ -68,9 +68,9 @@ const AppSearchBar = () => {
 
     return (
         <Paper component="form" className={classes.root}>
-            <IconButton className={classes.iconButton} aria-label="menu">
+            {/* <IconButton className={classes.iconButton} aria-label="menu">
                 <MenuIcon />
-            </IconButton>
+            </IconButton> */}
             <InputBase
                 className={classes.input}
                 placeholder="Search Google Maps"
@@ -80,10 +80,10 @@ const AppSearchBar = () => {
             <IconButton type="submit" className={classes.iconButton} aria-label="search" onClick={getRestaurants}>
                 <SearchIcon />
             </IconButton>
-            <Divider className={classes.divider} orientation="vertical" />
-            <IconButton color="primary" className={classes.iconButton} aria-label="directions">
+            {/* <Divider className={classes.divider} orientation="vertical" /> */}
+            {/* <IconButton color="primary" className={classes.iconButton} aria-label="directions">
                 <DirectionsIcon />
-            </IconButton>
+            </IconButton> */}
         </Paper>
     )
 }

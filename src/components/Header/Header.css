@@ -15,3 +15,7 @@
   padding: 20px;
   box-sizing: initial !important;
 }
+
+.MuiButton-root {
+  color: rgba(0, 0, 0, 0.54) !important;
+}

@@ -14,9 +14,19 @@ import ChatScreen from '../ChatScreen/ChatScreen';
 import AppSearchBar from '../AppSearchBar/AppSearchBar';
 import SignIn from '../Authentication/SignIn';
 import SignUp from '../Authentication/SignUp';
+import LandingPage from '../LandingPage/LandingPage';
+
+import Test from '../Test/Test';
 
 import { Provider } from 'react-redux';
 import store from '../../store'
+
+import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
+
+import Amplify, { Auth } from 'aws-amplify';
+import awsconfig from '../../aws-exports';
+
+Amplify.configure(awsconfig);
 
 function App() {
   return (
@@ -24,6 +34,9 @@ function App() {
       <div className="App">
         <Router>
           <Switch>
+            <Route path="/test">
+              <Test />
+            </Route>
             <Route path="/authentication/signup">
               <Header backButton="/" />
               <SignUp />
@@ -39,6 +52,9 @@ function App() {
             <Route path="/chat">
               <Header backButton="/" />
               <Chats />
+            </Route>
+            <Route path="/landing">
+              <LandingPage />
             </Route>
             <Route path="/">
               <Header />
@@ -62,4 +78,4 @@ function App() {
   );
 }
 
-export default App;
+export default withAuthenticator(App);
