@@ -37,8 +37,11 @@ function Header({ backButton }) {
                 <Link to="/">
                     <img
                         className="header__logo"
-                        src="https://cdn.worldvectorlogo.com/logos/tinder-2.svg"
-                        alt="tinder logo" />
+                        // source={require("../../assets/images/logo-white.png")}
+                        // src="https://cdn.worldvectorlogo.com/logos/tinder-2.svg"
+                        src="https://i.ibb.co/LgrghNg/logo.png"
+                        alt="logo" />
+
                 </Link>
 
                 <Link to="/chat">

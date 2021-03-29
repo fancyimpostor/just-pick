@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function RestaurantInfo(openModal) {
+export default function TransitionsModal() {
     const classes = useStyles();
     const [open, setOpen] = React.useState(false);
 

@@ -23,13 +23,13 @@ const SwipeButtons = () => {
                 <StarRateIcon fontSize="small" />
             </IconButton>
 
-            <IconButton className="swipeButtons__right">
+            {/* <IconButton className="swipeButtons__right">
                 <FavoriteIcon fontSize="small" />
             </IconButton>
 
             <IconButton className="swipeButtons__lightning">
                 <FlashOnIcon fontSize="small" />
-            </IconButton>
+            </IconButton> */}
         </div>
     )
 }

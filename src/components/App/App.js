@@ -15,6 +15,7 @@ import AppSearchBar from '../AppSearchBar/AppSearchBar';
 import SignIn from '../Authentication/SignIn';
 import SignUp from '../Authentication/SignUp';
 import LandingPage from '../LandingPage/LandingPage';
+import RestaurantInfo from '../RestaurantInfo';
 
 import Test from '../Test/Test';
 
@@ -52,6 +53,9 @@ function App() {
             <Route path="/chat">
               <Header backButton="/" />
               <Chats />
+            </Route>
+            <Route path="/restaurantinfo">
+              <RestaurantInfo />
             </Route>
             <Route path="/landing">
               <LandingPage />
